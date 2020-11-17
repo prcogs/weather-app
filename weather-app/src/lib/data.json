@@ -1,165 +1,166 @@
 {
-    "consolidated_weather": [
-      {
-        "id": 6204209377574912,
-        "weather_state_name": "Light Rain",
-        "weather_state_abbr": "lr",
-        "wind_direction_compass": "WSW",
-        "created": "2020-11-16T12:20:02.446620Z",
-        "applicable_date": "2020-11-16",
-        "min_temp": 8.79,
-        "max_temp": 12.25,
-        "the_temp": 11.100000000000001,
-        "wind_speed": 9.103897658442694,
-        "wind_direction": 254.13274105640758,
-        "air_pressure": 1014.5,
-        "humidity": 70,
-        "visibility": 8.911705639067844,
-        "predictability": 75
-      },
-      {
-        "id": 5331358139285504,
-        "weather_state_name": "Heavy Cloud",
-        "weather_state_abbr": "hc",
-        "wind_direction_compass": "SW",
-        "created": "2020-11-16T12:20:02.182517Z",
-        "applicable_date": "2020-11-17",
-        "min_temp": 11.254999999999999,
-        "max_temp": 14.705,
-        "the_temp": 14.34,
-        "wind_speed": 9.208015682687769,
-        "wind_direction": 224.3334650015942,
-        "air_pressure": 1021.5,
-        "humidity": 77,
-        "visibility": 12.023843255388531,
-        "predictability": 71
-      },
-      {
-        "id": 6221029878792192,
-        "weather_state_name": "Light Rain",
-        "weather_state_abbr": "lr",
-        "wind_direction_compass": "SSW",
-        "created": "2020-11-16T12:20:02.564555Z",
-        "applicable_date": "2020-11-18",
-        "min_temp": 9.545,
-        "max_temp": 15.004999999999999,
-        "the_temp": 14.84,
-        "wind_speed": 10.914444545873431,
-        "wind_direction": 204.16460577897064,
-        "air_pressure": 1014.5,
-        "humidity": 74,
-        "visibility": 14.916015469657202,
-        "predictability": 75
-      },
-      {
-        "id": 5746013710057472,
-        "weather_state_name": "Showers",
-        "weather_state_abbr": "s",
-        "wind_direction_compass": "W",
-        "created": "2020-11-16T12:20:02.256688Z",
-        "applicable_date": "2020-11-19",
-        "min_temp": 7.29,
-        "max_temp": 10.67,
-        "the_temp": 10.39,
-        "wind_speed": 11.440608521228029,
-        "wind_direction": 280.15273588417926,
-        "air_pressure": 1023,
-        "humidity": 66,
-        "visibility": 15.609465720194066,
-        "predictability": 73
-      },
-      {
-        "id": 4603712430407680,
-        "weather_state_name": "Heavy Cloud",
-        "weather_state_abbr": "hc",
-        "wind_direction_compass": "E",
-        "created": "2020-11-16T12:20:02.886894Z",
-        "applicable_date": "2020-11-20",
-        "min_temp": 4.495,
-        "max_temp": 8.48,
-        "the_temp": 8.48,
-        "wind_speed": 4.817610456623982,
-        "wind_direction": 99.27439923821066,
-        "air_pressure": 1030.5,
-        "humidity": 72,
-        "visibility": 9.348840272806807,
-        "predictability": 71
-      },
-      {
-        "id": 5094114950381568,
-        "weather_state_name": "Heavy Rain",
-        "weather_state_abbr": "hr",
-        "wind_direction_compass": "SW",
-        "created": "2020-11-16T12:20:05.276709Z",
-        "applicable_date": "2020-11-21",
-        "min_temp": 5.33,
-        "max_temp": 12.940000000000001,
-        "the_temp": 12.13,
-        "wind_speed": 6.200657758689255,
-        "wind_direction": 216.5,
-        "air_pressure": 1023,
-        "humidity": 85,
-        "visibility": 9.943181818181817,
-        "predictability": 77
-      }
-    ],
-    "time": "2020-11-16T15:06:19.468610Z",
-    "sun_rise": "2020-11-16T07:20:53.893378Z",
-    "sun_set": "2020-11-16T16:09:15.389850Z",
-    "timezone_name": "LMT",
-    "parent": {
-      "title": "England",
-      "location_type": "Region / State / Province",
-      "woeid": 24554868,
-      "latt_long": "52.883560,-1.974060"
+  "consolidated_weather": [
+    {
+      "id": 6230284426018816,
+      "weather_state_name": "Showers",
+      "weather_state_abbr": "s",
+      "wind_direction_compass": "WSW",
+      "created": "2020-11-16T21:40:05.261035Z",
+      "applicable_date": "2020-11-16",
+      "min_temp": 10.280000000000001,
+      "max_temp": 13.115,
+      "the_temp": 12.715,
+      "wind_speed": 8.350385634505157,
+      "wind_direction": 250.81497996280842,
+      "air_pressure": 1020,
+      "humidity": 71,
+      "visibility": 14.760983357193988,
+      "predictability": 73
     },
-    "sources": [
-      {
-        "title": "BBC",
-        "slug": "bbc",
-        "url": "http://www.bbc.co.uk/weather/",
-        "crawl_rate": 360
-      },
-      {
-        "title": "Forecast.io",
-        "slug": "forecast-io",
-        "url": "http://forecast.io/",
-        "crawl_rate": 480
-      },
-      {
-        "title": "HAMweather",
-        "slug": "hamweather",
-        "url": "http://www.hamweather.com/",
-        "crawl_rate": 360
-      },
-      {
-        "title": "Met Office",
-        "slug": "met-office",
-        "url": "http://www.metoffice.gov.uk/",
-        "crawl_rate": 180
-      },
-      {
-        "title": "OpenWeatherMap",
-        "slug": "openweathermap",
-        "url": "http://openweathermap.org/",
-        "crawl_rate": 360
-      },
-      {
-        "title": "Weather Underground",
-        "slug": "wunderground",
-        "url": "https://www.wunderground.com/?apiref=fc30dc3cd224e19b",
-        "crawl_rate": 720
-      },
-      {
-        "title": "World Weather Online",
-        "slug": "world-weather-online",
-        "url": "http://www.worldweatheronline.com/",
-        "crawl_rate": 360
-      }
-    ],
-    "title": "London",
-    "location_type": "City",
-    "woeid": 44418,
-    "latt_long": "51.506321,-0.12714",
-    "timezone": "Europe/London"
-  }
+    {
+      "id": 6360518471188480,
+      "weather_state_name": "Heavy Cloud",
+      "weather_state_abbr": "hc",
+      "wind_direction_compass": "SSW",
+      "created": "2020-11-16T21:40:08.307028Z",
+      "applicable_date": "2020-11-17",
+      "min_temp": 9.175,
+      "max_temp": 14.17,
+      "the_temp": 13.145,
+      "wind_speed": 4.908580194917682,
+      "wind_direction": 211.4927500224041,
+      "air_pressure": 1027,
+      "humidity": 80,
+      "visibility": 10.221866797900262,
+      "predictability": 71
+    },
+    {
+      "id": 5868063627935744,
+      "weather_state_name": "Clear",
+      "weather_state_abbr": "c",
+      "wind_direction_compass": "S",
+      "created": "2020-11-16T21:40:11.450609Z",
+      "applicable_date": "2020-11-18",
+      "min_temp": 7.619999999999999,
+      "max_temp": 15.899999999999999,
+      "the_temp": 14.61,
+      "wind_speed": 5.629737281454969,
+      "wind_direction": 179.66667042747105,
+      "air_pressure": 1022,
+      "humidity": 70,
+      "visibility": 13.8441501630478,
+      "predictability": 68
+    },
+    {
+      "id": 5072640516554752,
+      "weather_state_name": "Showers",
+      "weather_state_abbr": "s",
+      "wind_direction_compass": "W",
+      "created": "2020-11-16T21:40:14.313547Z",
+      "applicable_date": "2020-11-19",
+      "min_temp": 9.055,
+      "max_temp": 13.15,
+      "the_temp": 11.945,
+      "wind_speed": 9.262053735891726,
+      "wind_direction": 270,
+      "air_pressure": 1027,
+      "humidity": 70,
+      "visibility": 10.75407122405154,
+      "predictability": 73
+    },
+    {
+      "id": 6268101646614528,
+      "weather_state_name": "Showers",
+      "weather_state_abbr": "s",
+      "wind_direction_compass": "WSW",
+      "created": "2020-11-16T21:40:17.300782Z",
+      "applicable_date": "2020-11-20",
+      "min_temp": 5.27,
+      "max_temp": 10.565,
+      "the_temp": 9.54,
+      "wind_speed": 3.6763085472891643,
+      "wind_direction": 252.87432715821706,
+      "air_pressure": 1034,
+      "humidity": 74,
+      "visibility": 13.217808001272566,
+      "predictability": 73
+    },
+    {
+      "id": 5716082183634944,
+      "weather_state_name": "Light Rain",
+      "weather_state_abbr": "lr",
+      "wind_direction_compass": "SSW",
+      "created": "2020-11-16T21:40:20.384926Z",
+      "applicable_date": "2020-11-21",
+      "min_temp": 6.065,
+      "max_temp": 11.445,
+      "the_temp": 11.14,
+      "wind_speed": 4.3506979241231205,
+      "wind_direction": 197.49999999999997,
+      "air_pressure": 1030,
+      "humidity": 74,
+      "visibility": 9.999726596675416,
+      "predictability": 75
+    }
+  ],
+  "time": "2020-11-16T23:59:53.959605+01:00",
+  "sun_rise": "2020-11-16T08:01:44.940272+01:00",
+  "sun_set": "2020-11-16T17:08:41.822586+01:00",
+  "timezone_name": "LMT",
+  "parent": {
+    "title": "France",
+    "location_type": "Country",
+    "woeid": 23424819,
+    "latt_long": "46.71,1.72"
+  },
+  "sources": [
+    {
+      "title": "BBC",
+      "slug": "bbc",
+      "url": "http://www.bbc.co.uk/weather/",
+      "crawl_rate": 360
+    },
+    {
+      "title": "Forecast.io",
+      "slug": "forecast-io",
+      "url": "http://forecast.io/",
+      "crawl_rate": 480
+    },
+    {
+      "title": "HAMweather",
+      "slug": "hamweather",
+      "url": "http://www.hamweather.com/",
+      "crawl_rate": 360
+    },
+    {
+      "title": "Met Office",
+      "slug": "met-office",
+      "url": "http://www.metoffice.gov.uk/",
+      "crawl_rate": 180
+    },
+    {
+      "title": "OpenWeatherMap",
+      "slug": "openweathermap",
+      "url": "http://openweathermap.org/",
+      "crawl_rate": 360
+    },
+    {
+      "title": "Weather Underground",
+      "slug": "wunderground",
+      "url": "https://www.wunderground.com/?apiref=fc30dc3cd224e19b",
+      "crawl_rate": 720
+    },
+    {
+      "title": "World Weather Online",
+      "slug": "world-weather-online",
+      "url": "http://www.worldweatheronline.com/",
+      "crawl_rate": 360
+    }
+  ],
+  "title": "Paris",
+  "location_type": "City",
+  "woeid": 615702,
+  "latt_long": "48.856930,2.341200",
+  "timezone": "Europe/Paris"
+
+}
