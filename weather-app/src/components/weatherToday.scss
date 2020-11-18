@@ -1,18 +1,49 @@
 
 
 .weatherToday {
-    position: absolute;
-    bottom: 20px;
-
+    position: relative;
+    top: 75px;
     width: 100%;
     height: 75vh;
-
     text-align: center;
-
     color: #E7E7EB;
+
+    // z-index:10;
+
+    p:nth-of-type(1) {
+        font-size: 67px;
+        color: #E7E7EB;
+        margin-bottom: 1rem;
+    }
+
+    p:nth-of-type(2) {
+        font-size: 20px;
+        font-weight: 600;
+        color: #A09FB1;
+        margin-bottom: 4rem;
+    }
+
+    p:nth-of-type(3),
+    p:nth-of-type(4) {
+        font-size: 13px;
+        color:#88869D;
+    }
+
+    p:nth-of-type(4) {
+        font-weight: 600;
+    }
 }
 
 .imgToday {
     width: 140px;
     margin-right:25px ;
+}
+
+.cloudBackground {
+    position: absolute;
+    opacity: .23;
+    top: -50px;
+    // z-index: 1;
+    width: 27rem;
+    left: -60px;
 }

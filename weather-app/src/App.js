@@ -16,6 +16,7 @@ function App() {
   const [loadingSearch, setLoadingSearch] = useState(false)
   const [loadingData, setLoadingData] = useState(false)
   const [data, setData] = useState({ }) // data weather of city
+  const [temp, setTemp] = useState("c")
 
 
   // console.log(data)
@@ -59,6 +60,10 @@ function App() {
     })
   }
   
+  const changeTemp = useCallback((temp) => {
+    setTemp(temp)
+  }, [temp, setTemp])
+
   return (
     <div className="App">
       <CardMenu changeCity={changeCity} 
@@ -66,9 +71,11 @@ function App() {
                 loadingData={loadingData} 
                 loadingSearch={loadingSearch} 
                 getData={getData} 
-                citys={citys}/>
+                citys={citys}
+                changeTemp={changeTemp}
+                temp={temp}/>
 
-      {loadingData ? <CardWeather data={data}/> : <div className="cardWeather">loading</div>}
+      {loadingData ? <CardWeather data={data} temp={temp}/> : <div className="cardWeather">loading</div>}
     </div>
   );
 }

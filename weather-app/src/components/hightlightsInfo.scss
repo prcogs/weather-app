@@ -1,6 +1,7 @@
 
 
 .hightlightsInfo {
+    position: relative;
     width: 280px;
 
     margin: 10px;
@@ -9,4 +10,63 @@
     background-color: #1E213A;
 
     text-align: center;
+
+    p:nth-of-type(2) {
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    progress {
+        width: 70%;
+        height: 20px;
+        // background-color: #FFEC65;
+    }
+
+    span {
+        font-size: 12px;
+    }
+
+    span:nth-of-type(1) {
+        position: absolute;
+        bottom: 40px;
+        left: 38px;
+    }
+
+    span:nth-of-type(2) {
+        position: absolute;
+        bottom: 40px;
+        left: 126px;
+    }
+
+    span:nth-of-type(3) {
+        position: absolute;
+        bottom: 40px;
+        left: 217px;
+    }
+
+    span:nth-of-type(4) {
+        position: absolute;
+        bottom: 9px;
+        left: 228px;
+    }
+
+    .point {
+        position: absolute;
+        bottom: 19px;
+        right: 95px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.north-icon {
+    width: 15px;
+    background-color: grey;
+    padding: 6px;
+    border-radius: 30px;
+    color: #E7E7EB;
+    margin-top: 23px;
+    margin-bottom: -12px;
 }
