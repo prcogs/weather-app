@@ -20,7 +20,7 @@ const WeatherForecast = ({ data, temp }) => {
             <div className="info">
             <img src={pathWheather} alt={data.weather_state_name} className="imgInfo"/>
             </div>
-            <p>{temp === "f" ? (Math.round(data.the_temp) * 9/5) + 32 + ' °F' : Math.round(data.the_temp) + ' °C'} · {temp === "f" ? (Math.round(data.the_temp) * 9/5) + 32 + ' °F' : Math.round(data.the_temp) + ' °C'}</p>
+            <p>{temp === "f" ? Math.round(data.max_temp * 9/5) + 32 + ' °F' : Math.round(data.max_temp) + ' °C'} · {temp === "f" ? Math.round(data.min_temp * 9/5) + 32 + ' °F' : Math.round(data.min_temp) + ' °C'}</p>
         </div>
     )
 }
