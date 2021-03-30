@@ -6,9 +6,9 @@ Weather app est une application météo. On peut y retrouver toutes les prévisi
 
 ## Stacks
 
-Front : ReactJS, Creat-react-app
-Style : Sass
-API   : [metaweather]https://www.metaweather.com/api/)
+* Front : ReactJS, Creat-react-app
+* Style : Sass
+* API   : [metaweather]https://www.metaweather.com/api/)
 
 
 
