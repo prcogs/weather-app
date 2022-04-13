@@ -2,15 +2,13 @@
 
 ## Description de l'application
 
-Weather app est une application météo. On peut y retrouver toutes les prévisions météorologiques de nombreuses villes dans le monde.
+Weather app est une application météo. On peut y retrouver toutes les prévisions météorologiques des villes dans le monde.
 
 ## Stacks
 
 * Front : ReactJS, Creat-react-app
 * Style : Sass
-* API   : [metaweather]https://www.metaweather.com/api/)
-
-
+* API   : [metaweather](https://www.metaweather.com/api/)
 
 
 ---
