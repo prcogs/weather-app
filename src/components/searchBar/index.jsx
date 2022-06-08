@@ -1,60 +1,96 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
+import { UNIT, useUnitTemperature } from 'utils/hooks/context/use-unit-temperature'
+import { useWeather } from 'utils/hooks/context/use-weather'
 
 import './searchBar.scss'
 
 
-const SearchBar = ({ changeCity, loadingSearch, getData, citys, changeTemp, temp }) => {
-    const [search, setSearch] = useState(false)
+const active = {
+   color: "#110E3C",
+   background: "white",
+}
 
-    if( temp === "c") {
-        var colorTempC = "#110E3C"
-        var backColorTempC = "white"
+const notActive = {
+   color: "white",
+   background: "#585676",
+}
 
-        var colorTempF = "white"
-        var backColorTempF = "#585676"
-    }
 
-    else if (temp === "f") {
-        var colorTempC = "white"
-        var backColorTempC = "#585676"
+const SearchBar = () => {
+   const [search, setSearch] = useState(false)
+   const { unit, handleUnit } = useUnitTemperature()
+   const { handleCity, errors, history } = useWeather()
+   
 
-        var colorTempF = "#110E3C"
-        var backColorTempF = "white"
-    }
+   const refCity = useRef()
 
-    if(!search) {
-        return (
-            <>
+   const celsius = unit === UNIT.celsius ? active : notActive
+   const fahrenheit = unit === UNIT.fahrenheit ? active : notActive
+
+
+   if (!search) {
+      return (
+         <>
             <div className="searchBar">
-
-                <button onClick={ () => { setSearch(true)}} className="seachBtn">Seach for places</button>
+               <button onClick={() => { setSearch(true) }} className="seachBtn">Seach for places</button>
             </div>
+
             <div className="btnTemp">
-                <button onClick={() => {changeTemp("c")}} style={{ "color" : colorTempC, "backgroundColor" : backColorTempC}}>°C</button>
-                <button onClick={() => {changeTemp("f")}} style={{ "color" : colorTempF, "backgroundColor" : backColorTempF}}>°F</button>
-            </div>
-            </>
-        )
-    }
+               <button
+                  onClick={() => { handleUnit(UNIT.celsius) }}
+                  style={{ "color": celsius.color, "backgroundColor": celsius.background }}
+               >
+                  °C
+               </button>
 
-    else if (search) {
-        return (
-            <div className="searchBarLarge">
-                <button onClick={() => {setSearch(false)}} className="cross"><i className="fa fa-times fa-2x" aria-hidden="true"></i></button>
-                <input type="text" onChange={(e) => {changeCity(e.target.value)}} className="inputBtn" placeholder="search location"/><br/>
-                <ul className="listCity">
-                {loadingSearch ? citys.map((item, i) => 
-                        <li key={i}>
-                            <button onClick={() => {getData(item.woeid)}} className="btnCity">
-                                {item.title} <i className="fa fa-angle-right iconAngle" aria-hidden="true"></i>
-                            </button>
-                        </li>) 
-                        : <p style={{"color" : "grey"}}>Wait a minute</p>}<br/>
-                </ul>  
+               <button
+                  onClick={() => { handleUnit(UNIT.fahrenheit) }}
+                  style={{ "color": fahrenheit.color, "backgroundColor": fahrenheit.background }}
+               >
+                  °F
+               </button>
             </div>
-        )
-    }
-    
+         </>
+      )
+   }
+
+
+   return (
+      <div className="searchBarLarge">
+         <button
+            onClick={() => { setSearch(false) }}
+            className="cross"
+         >
+            <i className="fa fa-times fa-2x" aria-hidden="true"></i>
+         </button>
+
+         <div className='searchInput'>
+            <input
+               type="text"
+               ref={refCity}
+               className="searchInput__input"
+               placeholder="search location"
+            />
+            <button className='searchInput__btn' onClick={() => handleCity(refCity.current.value)}>Search</button>
+         </div>
+
+         <p className='searchInput__error'>{errors}</p>
+
+
+         <br />
+      
+         <ul className="listCity">
+            {history.map((name, i) =>
+               <li key={i}>
+                  <button onClick={() => handleCity(name)} className="btnCity">
+                     {name} <i className="fa fa-angle-right iconAngle" aria-hidden="true"></i>
+                  </button>
+               </li>)}
+               
+               <br />
+         </ul>
+      </div>
+   )
 }
 
 export default SearchBar

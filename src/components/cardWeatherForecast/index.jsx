@@ -1,18 +1,23 @@
-import WeatherForecast from '../weatherForcast'
+import { useWeather } from 'utils/hooks/context/use-weather'
+import WeatherForecast from 'components/weatherForcast'
 
 import './cardWeatherForecast.scss'
 
 
-const CardWeatherForecast = ({ data, temp }) => {
-    const forecast = data.filter((item,i) => i > 0)
+const CardWeatherForecast = () => {
+   const { data } = useWeather()
 
-    return (
-        <div className="cardWeatherForecast">
-            {forecast.map((item, i) => {
-                return <WeatherForecast data={item} temp={temp} key={i}/>
-            } )}
-        </div>
-    )
+   const oneDataPerDay = data.list.filter(({ dt_txt }) => Number(dt_txt.slice(10, 13)) === 12)
+
+
+   return (
+      <div className="cardWeatherForecast">
+         {oneDataPerDay.slice(0, 4).map((item, i) => (
+            <WeatherForecast data={item} idx={i} key={i} />
+         ))}
+      </div>
+   )
 }
+
 
 export default CardWeatherForecast

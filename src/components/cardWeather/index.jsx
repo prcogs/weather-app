@@ -1,17 +1,17 @@
-import CardWeatherForecast from '../cardWeatherForecast'
-import WeatherHightlights from '../weatherHightlights'
+import CardWeatherForecast from 'components/cardWeatherForecast'
+import WeatherHightlights from 'components/weatherHightlights'
 
 import './cardWeather.scss'
 
-const CardWeather = ({ data, temp }) => {
-    const infoDay = data.consolidated_weather[0]
 
-    return (
-        <div className="cardWeather">
-            <CardWeatherForecast data={data.consolidated_weather} temp={temp}/>
-            <WeatherHightlights data={infoDay}/>
-        </div>
-    )
+const CardWeather = () => {
+   return (
+      <div className="cardWeather">
+         <CardWeatherForecast />
+
+         <WeatherHightlights />
+      </div>
+   )
 }
 
 export default CardWeather

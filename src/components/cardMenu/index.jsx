@@ -1,17 +1,21 @@
-import SearchBar from '../searchBar'
-import WeatherToday from '../weatherToday'
+import { useWeather } from 'utils/hooks/context/use-weather'
+
+import SearchBar from 'components/searchBar'
+import WeatherToday from 'components/weatherToday'
 
 import './cardMenu.scss'
 
-const CardMenu = ( { changeCity, data, loadingData, loadingSearch, getData, citys, changeTemp, temp }) => {
 
-    return (
-        <div className="cardMenu">
-            <SearchBar changeCity={changeCity} loadingSearch={loadingSearch} getData={getData} citys={citys} changeTemp={changeTemp} temp={temp}/>
-            
-            {loadingData ? <WeatherToday data={data.consolidated_weather[0]} city={data.title} temp={temp} /> : <div className="loader"></div>}
-        </div>
-    )
+const CardMenu = () => {
+	const { loading } = useWeather()
+
+	return (
+		<div className="cardMenu">
+			<SearchBar />
+
+			{!loading ? <WeatherToday /> : <div className="loader" />}
+		</div>
+	)
 }
 
 export default CardMenu

@@ -1,30 +1,33 @@
+import { dateParsed } from 'utils/helpers/dateParsed';
+import { temperatureParsed } from 'utils/helpers/temperatureParsed';
+import { useUnitTemperature } from 'utils/hooks/context/use-unit-temperature';
+import { ICONS } from 'utils/icons';
+
 import './weatherForcast.scss'
 
 
-const WeatherForecast = ({ data, temp }) => {
-    const myDate     = new Date(data.applicable_date)
-    const shortMonth = myDate.toLocaleString('en-us', { month: 'short' });
-    const shortDay   = myDate.toLocaleString('en-us', { weekday: 'short' });
-    const dayNow     = new Date
-    const pathWheather = "../images/" + data.weather_state_name.replace(' ', '') + '.png'
+const WeatherForecast = ({ data, idx }) => {
+   const { unit } = useUnitTemperature()
 
-    if(myDate.getDate() === dayNow.getDate() + 1) {
-        var day = "Tomorrow"
-    } else {
-        var day = shortDay  +', '+ myDate.getDate() + ' ' + shortMonth
-    }
 
-    return (
-        <div className="weatherForcast">
-            <p>{day}</p>
-            <div className="info">
-            <img src={pathWheather} alt={data.weather_state_name} className="imgInfo"/>
-            </div>
-            <p>{temp === "f" ? Math.round(data.max_temp * 9/5) + 32 + ' °F' : Math.round(data.max_temp) + ' °C'} · {temp === "f" ? Math.round(data.min_temp * 9/5) + 32 + ' °F' : Math.round(data.min_temp) + ' °C'}</p>
-        </div>
-    )
+   return (
+      <div className="weatherForcast">
+         <p>{idx === 0 ? 'Tomorrow' : dateParsed(data.dt_txt)}</p>
+
+         <div className="info">
+            <img src={`/images/${ICONS[data.weather[0].main]}.png`} alt={ICONS[data.weather[0].main]} className="imgInfo" />
+         </div>
+
+         <p>
+            {temperatureParsed(data.main.temp_min, unit)}
+            {' '}
+            ·
+            {' '}
+            {temperatureParsed(data.main.temp_max, unit)}
+         </p>
+      </div>
+   )
 }
-
 
 
 export default WeatherForecast
