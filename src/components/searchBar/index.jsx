@@ -32,7 +32,7 @@ const SearchBar = () => {
       return (
          <>
             <div className="searchBar">
-               <button onClick={() => { setSearch(true) }} className="seachBtn">Seach for places</button>
+               <button onClick={() => { setSearch(true) }} className="seachBtn">Search for places</button>
             </div>
 
             <div className="btnTemp">
