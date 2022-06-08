@@ -1,5 +1,5 @@
-import CardWeatherForecast from './cardWeatherForecast'
-import WeatherHightlights from './weatherHightlights'
+import CardWeatherForecast from '../cardWeatherForecast'
+import WeatherHightlights from '../weatherHightlights'
 
 import './cardWeather.scss'
 

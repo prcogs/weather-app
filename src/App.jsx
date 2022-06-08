@@ -8,7 +8,7 @@ import CardMenu from './components/cardMenu'
 import CardWeather from './components/cardWeather'
 import { useCallback, useEffect, useState } from 'react';
 
-import './components/loader.scss'
+import './loader.scss'
 
 function App() {
   const [citys, setCitys] = useState([]) // list of city in searchBar

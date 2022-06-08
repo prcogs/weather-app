@@ -1,4 +1,4 @@
-import HightlightsInfo from './hightlightsInfo'
+import HightlightsInfo from '../hightlightsInfo'
 
 import './weatherHightlights.scss'
 

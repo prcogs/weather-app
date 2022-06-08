@@ -1,6 +1,6 @@
 import './hightlightsInfo.scss'
 
-import calcPointsCompass from "../lib/pointsCompass"
+import calcPointsCompass from "../../lib/pointsCompass"
 
 
 const HightlightsInfo = ({ children, windSpeed, windDirection, humidity, visibility, air_pressure }) => {

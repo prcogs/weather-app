@@ -1,5 +1,5 @@
-import SearchBar from './searchBar'
-import WeatherToday from './weatherToday'
+import SearchBar from '../searchBar'
+import WeatherToday from '../weatherToday'
 
 import './cardMenu.scss'
 

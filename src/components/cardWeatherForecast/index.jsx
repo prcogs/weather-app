@@ -1,4 +1,4 @@
-import WeatherForecast from './weatherForecast'
+import WeatherForecast from '../weatherForcast'
 
 import './cardWeatherForecast.scss'
 
